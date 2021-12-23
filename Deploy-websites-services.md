@@ -51,7 +51,7 @@ To connect GitHub Actions, you will create a secret named `AZURE_CREDENTIALS` th
 1. [Create a new service principal](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli) in the Azure portal for your app. The service principal must be assigned the Contributor role.
 
     ```console
-    az ad sp create-for-rbac --name "podcastsp" --role contributor --scopes /subscriptions/{subscription-id}/resourceGroups/{resource-group} --sdk-auth
+    az ad sp create-for-rbac --name "podcastsp" --role contributor --scopes /subscriptions/{subscription-id}/resourceGroups/{resource-group}
     ```
 
     > In the above command, replace the `{subscription-id}` with the GUID of your subscription. Run the command `az account show` and use the value of the "Id" property. Replace the `{resource-group}` with `podcastrg` or the resource group name you created earlier.
